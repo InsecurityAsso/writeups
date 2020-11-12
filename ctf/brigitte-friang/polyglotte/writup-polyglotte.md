@@ -29,7 +29,7 @@ D’après l’extension il semblerait que le fichier soit un PDF. Il se lance d
 
 Malgré plusieurs tentatives (code barre, redimensionnement, etc) nous n'arrivons pas à exploiter les bandes verticales. Heureusement il reste bien d'autres informations à aller chercher sur des fichiers en stéganographie !
 
-![image-20201031133356012](/home/jbedel/Cybersecurity/CTF/Events/Challenge Brigitte Friang/Writups/Le Polyglotte/Le Polyglotte/images/image-20201031133356012.png)
+![image-20201031133356012](images/image-20201031133356012.png)
 
 <u>Vérification du type de fichier</u>
 
