@@ -156,7 +156,7 @@ print('Success!')
 
 Et ça marche ! En chiffrant le fichier *message.pdf* on obtient une image au format JPG représentant une explosion :
 
-![](./images\blowfish.jpeg)
+![blowfish_nuke](images/blowfish_screen.png)
 
 ### Découverte et cracking de l'exécutable
 
