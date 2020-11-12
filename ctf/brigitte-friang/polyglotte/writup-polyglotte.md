@@ -21,7 +21,7 @@
 
 ### *message.pdf*
 
-<u>Utilisation "naïve"</u>
+#### Utilisation "naïve"
 
 D’après l’extension il semblerait que le fichier soit un PDF. Il se lance d'ailleurs sans problème dans un lecteur de PDF et présente alors les mots “Top Secret” puis d’étranges bandes noires verticales.
 
@@ -31,7 +31,7 @@ Malgré plusieurs tentatives (code barre, redimensionnement, etc) nous n'arrivon
 
 ![image-20201031133356012](images/image-20201031133356012.png)
 
-<u>Vérification du type de fichier</u>
+#### Vérification du type de fichier
 
 Notons également qu'un `file message.pdf` reconnaît le fichier comme de la donnée binaire brute, et non un PDF classique, il y a donc probablement quelque chose de particulier dans sa construction et son contenu..
 
@@ -39,7 +39,7 @@ On nous indique d'ailleurs dans la description qu’on dispose d’un fichier do
 
 Si un autre fichier "entier" est présent dans *message.pdf* alors il sera facilement identifiable via des [magic bytes](https://en.wikipedia.org/wiki/List_of_file_signatures) permettant de l'identifier. L'outil *binwalk* peut être utilisé : `binwalk -Me message.pdf` mais ne donne rien de concluant. Il existe toutefois des méthodes plus avancées de créer des fichiers polyglottes, que nous verrons par la suite.
 
-<u>Recherche de contenu caché</u>
+#### Recherche de contenu caché
 
 Il arrive souvent en stéganographie qu’on cache une chaîne de caractère (voir même un fichier) dans un autre. Plusieurs méthodes “traditionnelles” existent comme ajouter la donnée cachée à la fin du fichier binaire, dans les métadonnées, ou encore cacher l’information dans les bits de poids faible d’une image (rendant la modification invisible à l’œil nu) avec la fameuse technique du “Least Significant Byte” ou LSB.
 
@@ -301,7 +301,7 @@ On a bien le bon mot de passe, il ne reste plus qu'à reformer le hash à partir
 
 > FLAG : DGSESIEE{aa938a164d862d5ae3c4d244037402d4}
 
-### Bonus : organisation à l'aide d'une mind map
+## Bonus : organisation à l'aide d'une mind map
 
 On ne s'en rend pas forcément compte à la lecture du writeup, mais lorsqu'on s'attaque à un challenge de ce type on peut se retrouver facilement perdu face à la multitude d'indices et de pistes potentielles. Par exemple ici on avait des infos potentiellement cachées sur une multitude de fichiers extraits. 
 
