@@ -5,22 +5,22 @@
 
 >  Une livraison de souffre doit avoir lieu 47°N 34 2°W 1 39.
 >
-> Elle sera effectuée par un certain REJEWSKI. Il a reçu des instructions sur un foulard pour signaler à Evil Gouv son arrivée imminente.
+>  Elle sera effectuée par un certain REJEWSKI. Il a reçu des instructions sur un foulard pour signaler à Evil Gouv son arrivée imminente.
 >
-> Nous avons une photo du foulard, mais celle-ci n'est pas très nette et nous n'avons pas pu lire toutes les informations. Le fichier foulard.txt, est la retranscription du foulard.
+>  Nous avons une photo du foulard, mais celle-ci n'est pas très nette et nous n'avons pas pu lire toutes les informations. Le fichier foulard.txt, est la retranscription du foulard.
 >
-> Nous avons un peu avancé sur les parties illisibles :
+>  Nous avons un peu avancé sur les parties illisibles :
 >
-> (texte illisible 1) est deux lettres un espace deux lettres. Il pourrait y avoir un lien avec le dernier code d'accès que vous avez envoyé à Antoine Rossignol.
+>  (texte illisible 1) est deux lettres un espace deux lettres. Il pourrait y avoir un lien avec le dernier code d'accès que vous avez envoyé à Antoine Rossignol.
 >
-> (texte illisible 2) a été totalement effacé et enfin (texte illisible 3) semble être deux lettres.
+>  (texte illisible 2) a été totalement effacé et enfin (texte illisible 3) semble être deux lettres.
 >
-> REJEWSKI vient d'envoyer un message (final.txt). Il faut que vous arriviez à le déchiffrer. Je vous conseille d'utiliser openssl pour RSA.
+>  REJEWSKI vient d'envoyer un message (final.txt). Il faut que vous arriviez à le déchiffrer. Je vous conseille d'utiliser openssl pour RSA.
 >
-> Le flag est de la forme DGSESIEE{MESSAGE} où MESSAGE correspond à la partie centrale du texte en majuscules sans espace.
+>  Le flag est de la forme DGSESIEE{MESSAGE} où MESSAGE correspond à la partie centrale du texte en majuscules sans espace.
 >
-> final.txt (SHA256=1e93526cd819aedb8496430a800a610068e95762536b0366ca7c303a74eaab03) : http://challengecybersec.fr/d3d2bf6b74ec26fdb57f76171c36c8fa/final.txt
-> foulard.txt (SHA256=9c8b0caf9d72fa68ddb6b4a68e860ee594683f7fe4a01a821914539ef81a1f21) : http://challengecybersec.fr/d3d2bf6b74ec26fdb57f76171c36c8fa/foulard.txt 
+>  final.txt (SHA256=1e93526cd819aedb8496430a800a610068e95762536b0366ca7c303a74eaab03) : http://challengecybersec.fr/d3d2bf6b74ec26fdb57f76171c36c8fa/final.txt
+>  foulard.txt (SHA256=9c8b0caf9d72fa68ddb6b4a68e860ee594683f7fe4a01a821914539ef81a1f21) : http://challengecybersec.fr/d3d2bf6b74ec26fdb57f76171c36c8fa/foulard.txt 
 
 Ce challenge est un challenge de cryptanalyse. Le scénario qui nous est donné explique qu’un message, envoyé par un certain agent ennemi nommé REJEWSKI, a été intercepté. Son protocole de chiffrement a également été partiellement intercepté. Le message se trouve dans le fichier final.txt et le protocole dans le fichier foulard.txt.
 Voici comment nous avons procédé à la récupération du flag.
@@ -68,7 +68,8 @@ La machine Enigma m3 avait plusieurs paramètre à régler pour coder un message
 
 <u>Le fichier foulard.txt nous aide à trouver ces paramètres :</u>
 
-- « Uniquement les impairs en ordre croissant » fait référence aux rotors à utiliser donc le 1, le 3 et le donne la position des bagues sur les rotors est donné en plaintext : **REJ**
+- « Uniquement les impairs en ordre croissant » fait référence aux rotors à utiliser donc le 1, le 3 et le 5 
+- La position des bagues sur les rotors est donné en plaintext : **REJ**
 - Les connections entre les lettres sont a trouver dans le message envoyé à Antoine Rossignol pour les challenges préliminaire : « b a :e z ». La plugboard est donc **B-E** et **A-Z**
 - La position initiale des rotors est donnée en plaintext : **MER**
 - Le réflecteur à utiliser est à deviner dans la lettre **B**, seule partie du message qui se rapportait au réflecteur

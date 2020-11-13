@@ -27,9 +27,11 @@ D’après l’extension il semblerait que le fichier soit un PDF. Il se lance d
 
 ![image-20201031133356011](./images/image-20201031133356011.png)
 
-Malgré plusieurs tentatives (code barre, redimensionnement, etc) nous n'arrivons pas à exploiter les bandes verticales. Heureusement il reste bien d'autres informations à aller chercher sur des fichiers en stéganographie !
+Malgré plusieurs tentatives (code barre, redimensionnement, etc) nous n'arrivons pas à exploiter les bandes verticales. 
 
 ![image-20201031133356012](images/image-20201031133356012.png)
+
+Heureusement il reste bien d'autres informations à aller chercher sur des fichiers en stéganographie !
 
 #### Vérification du type de fichier
 
@@ -114,6 +116,8 @@ Prenons le ligne par ligne :
 - La dernière ligne nous donne un nouveau fragment du flag !
 
 ### *hint.png*
+
+![hint](images/hint_screen.png)
 
 Même chose pour ce fichier, on vérifie son type avec `file` et `binwalk`, il s'agit bien d'un PNG classique. Passons rapidement sur StegOnline, pas grand chose si ce n'est la chaîne "Ange Albertini" présente dans le fichier.
 
